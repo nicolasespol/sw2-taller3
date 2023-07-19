@@ -72,6 +72,8 @@ class TestDiningExperienceManager(unittest.TestCase):
         self.assertEqual(order, {("Chinese", "Kung Pao Chicken"): 2, ("Italian", "Lasagna"): 3, ("Pastries", "Croissant"): 3, ("Pastries", "Pain au Chocolat"): 6, ("Chef's Specials", "Caviar"): 1})
         self.assertEqual(cost, 63)  # With 20% discount, $25 discount, and 5% surcharge
 
-
     if __name__ == "__main__":
-        unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
+        suite = unittest.defaultTestLoader.discover(".", pattern="test.py")
+        print(f"Running {suite.countTestCases()} tests:")
+        result = xmlrunner.XMLTestRunner(output='test-reports').run(suite)
+        print(f"Ran {result.testsRun} tests, {len(result.failures)} failed, {len(result.errors)} errors.")
