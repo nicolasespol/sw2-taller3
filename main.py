@@ -3,6 +3,8 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+#blasldalsd
+
 class DiningExperienceManager:
     MENU = {
         "Chinese": {"Kung Pao Chicken": 5, "Sweet and Sour Pork": 5, "Fried Rice": 5},
