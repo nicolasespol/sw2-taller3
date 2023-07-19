@@ -3,7 +3,7 @@ import xmlrunner
 
 from main import DiningExperienceManager
 
-#blablala
+#blab
 
 class TestDiningExperienceManager(unittest.TestCase):
     def setUp(self):
